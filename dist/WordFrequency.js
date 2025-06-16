@@ -10,13 +10,15 @@ class WordFrequency {
         this.words.forEach(word => {
             wordCount[word] = (wordCount[word] || 0) + 1;
         });
-        // Sort by frequency descending, then alphabetically
+        // Sort by frequency (descending), then by alphabetical order (ascending)
         return Object.keys(wordCount)
-            .sort((a, b) => wordCount[b] - wordCount[a] || a.localeCompare(b))
+            .sort((a, b) => {
+            const freqDiff = wordCount[b] - wordCount[a];
+            return freqDiff !== 0 ? freqDiff : a.localeCompare(b);
+        })
             .slice(0, this.k);
     }
 }
-// Example usage:
 const words = ["the", "day", "is", "sunny", "the", "the", "the", "sunny", "is", "is"];
 const k = 3;
 const wf = new WordFrequency(words, k);
