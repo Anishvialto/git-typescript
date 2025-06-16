@@ -1,5 +1,5 @@
 // Define a class for IP address validation
-class IPAddressValidator {
+/*class IPAddressValidator {
   private queryIP: string;
 
   // Constructor accepts an IP address as input
@@ -54,4 +54,4 @@ const ip2 = new IPAddressValidator("2001:db8:85a3:0:0:8A2E:0370:7334");
 console.log(ip2.validateIPAddress()); // Output: "IPv6"
 
 const ip3 = new IPAddressValidator("192.168.01.1");
-console.log(ip3.validateIPAddress()); // Output: "Neither"
+console.log(ip3.validateIPAddress()); // Output: "Neither" */
